@@ -25,7 +25,7 @@ namespace SimpleCalculator
                     Console.WriteLine("Write a valid second number : ");
                     secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
 
-                    Console.WriteLine("Write a valid operation (+, -, *, /) or (plus, minus, time, divide by)");
+                    Console.WriteLine("Write a valid operation (+, -, *, /) or (plus , minus, time, divide by)");
                     operation = Console.ReadLine();
 
                     if(operation.Equals('+') || operation.Equals('-') || operation.Equals('*') || operation.Equals('/'))

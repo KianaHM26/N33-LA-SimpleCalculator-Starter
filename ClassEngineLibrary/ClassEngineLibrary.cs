@@ -12,16 +12,16 @@ namespace ClassEngineLibrary
             {
                 double result = 0;
 
-                if (argOperation == "+" || argOperation.ToLower() == "add")
+                if (argOperation == "+" || argOperation.ToLower() == "plus")
                 {
                     result = argFirstNumber + argSecondNumber;
 
                 }
-                else if (argOperation == "-" || argOperation.ToLower() == "subtract")
+                else if (argOperation == "-" || argOperation.ToLower() == "minus")
                 {
                     result = argFirstNumber - argSecondNumber;
                 }
-                else if (argOperation == "*" || argOperation.ToLower() == "multiply")
+                else if (argOperation == "*" || argOperation.ToLower() == "time")
                 {
                     result = argFirstNumber * argSecondNumber;
                 }
@@ -41,4 +41,4 @@ namespace ClassEngineLibrary
             }
         }
     }
-}
+
