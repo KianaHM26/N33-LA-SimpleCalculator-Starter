@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using ClassEngineLibrary;
 
@@ -19,16 +20,16 @@ namespace SimpleCalculator
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
                 do
                 {
-                    Console.WriteLine("Write a valid first number : ");
-                    firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
+                    Console.Write("Write a valid first number : ");
+                    firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine().Split(':').Last().Trim());
 
-                    Console.WriteLine("Write a valid second number : ");
-                    secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
+                    Console.Write("Write a valid second number : ");
+                    secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine().Split(':').Last().Trim());
 
-                    Console.WriteLine("Write a valid operation (+, -, *, /) or (plus , minus, time, divide by)");
-                    operation = Console.ReadLine();
+                    Console.Write("Write a valid operation (+, -, *, /) or (plus , minus, time, divide by) : ");
+                    operation = Console.ReadLine().Split(':').Last().Trim();
 
-                    if(operation.Equals('+') || operation.Equals('-') || operation.Equals('*') || operation.Equals('/'))
+                    if (operation.Equals('+') || operation.Equals('-') || operation.Equals('*') || operation.Equals('/'))
                     {
                         isValid = true;
                     }
