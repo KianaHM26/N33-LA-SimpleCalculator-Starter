@@ -42,17 +42,19 @@ namespace SimpleCalculator
                     }
                 } while (!firstNumber.HasValue && !secondNumber.HasValue && !isValid);
 
-
-                StringBuilder sb = new StringBuilder();
-                sb.Append("Value: ").Append(firstNumber.Value);
-                sb.Append(" Operation: ").Append(operation);
-                sb.Append(" Value: ").Append(secondNumber.Value);
-                Console.WriteLine(sb.ToString());
-
-
                 double result = calculatorEngine.Calculate(operation, firstNumber.Value, secondNumber.Value);
 
-                Console.WriteLine(result);
+                StringBuilder sb = new StringBuilder();
+                sb.Append(firstNumber.Value)
+                  .Append(" ")
+                  .Append(operation)
+                  .Append(" ")
+                  .Append(secondNumber.Value)
+                  .Append(" = ")
+                  .Append(result);
+                
+
+                Console.WriteLine(sb.ToString());
 
             } catch (Exception ex)
             {
