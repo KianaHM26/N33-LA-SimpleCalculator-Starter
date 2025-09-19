@@ -2,6 +2,8 @@
 using System.Linq;
 using System.Text;
 using ClassEngineLibrary;
+using ClassEngineLibrary.Properties;
+
 
 namespace SimpleCalculator
 {
@@ -16,25 +18,29 @@ namespace SimpleCalculator
                 string operation;
                 bool isValid = false;
 
+
                 // Class to perform actual calculations
                 CalculatorEngine calculatorEngine = new CalculatorEngine();
                 do
                 {
-                    Console.Write("Write a valid first number : ");
-                    firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine().Split(':').Last().Trim());
+                    Console.Write(LanguageResource.ValidFirstNumber);
+                    firstNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
 
-                    Console.Write("Write a valid second number : ");
-                    secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine().Split(':').Last().Trim());
+                    Console.Write(LanguageResource.ValidSecondNumber);
+                    secondNumber = InputConverter.ConvertInputToNumeric(Console.ReadLine());
 
-                    Console.Write("Write a valid operation (+, -, *, /) or (plus , minus, time, divide by) : ");
-                    operation = Console.ReadLine().Split(':').Last().Trim();
+                    Console.Write(LanguageResource.ValidOp);
+                    operation = Console.ReadLine();
 
+                    operation = operation.Trim();
+                    // Check if operation is valid
                     if (operation.Equals('+') || operation.Equals('-') || operation.Equals('*') || operation.Equals('/'))
                     {
                         isValid = true;
                     }
-                    else if (operation.ToLower().Equals("plus") || operation.ToLower().Equals("minus") || operation.ToLower().Equals("time") || operation.Equals("divided by"))
+                    else if (operation.ToLower().Equals(LanguageResource.Plus) || operation.ToLower().Equals(LanguageResource.Minus) || operation.ToLower().Equals(LanguageResource.Time) || operation.Equals(LanguageResource.DividedBy))
                     {
+                        Console.WriteLine("The words match");
                         isValid = true;
                     }
                     else

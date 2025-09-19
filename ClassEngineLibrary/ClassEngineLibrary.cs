@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassEngineLibrary.Properties;
 
 namespace ClassEngineLibrary
 {
@@ -12,29 +13,33 @@ namespace ClassEngineLibrary
             {
                 double result = 0;
 
-                if (argOperation == "+" || argOperation.ToLower() == "plus")
+                if (argOperation == "+" || argOperation.ToLower().Equals(LanguageResource.Plus))
                 {
-                    result = argFirstNumber + argSecondNumber;
+                Console.WriteLine("The words match in plus");
+                result = argFirstNumber + argSecondNumber;
 
                 }
-                else if (argOperation == "-" || argOperation.ToLower() == "minus")
+                else if (argOperation == "-" || argOperation.ToLower().Equals(LanguageResource.Minus))
                 {
-                    result = argFirstNumber - argSecondNumber;
+                    Console.WriteLine("The words match in minus");
+                result = argFirstNumber - argSecondNumber;
                 }
-                else if (argOperation == "*" || argOperation.ToLower() == "time")
+                else if (argOperation == "*" || argOperation.ToLower().Equals(LanguageResource.Time))
                 {
-                    result = argFirstNumber * argSecondNumber;
+                    Console.WriteLine("The words match in time");
+                result = argFirstNumber * argSecondNumber;
                 }
-                else if (argOperation == "/" || argOperation.ToLower() == "divide by")
+                else if (argOperation == "/" || argOperation.ToLower().Equals(LanguageResource.DividedBy))
                 {
-                    if (argSecondNumber != 0)
+                    Console.WriteLine("The words match in divided by");
+                if (argSecondNumber != 0)
                         result = argFirstNumber / argSecondNumber;
                     else
                         throw new DivideByZeroException("Division by zero is not allowed.");
                 }
                 else
                 {
-                    throw new DivideByZeroException("Invalid operation.");
+                    throw new NoValidOperations("Invalid operation.");
                 }
 
                 return result;

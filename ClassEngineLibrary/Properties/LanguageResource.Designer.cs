@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SimpleCalculator.Properties {
+namespace ClassEngineLibrary.Properties {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace SimpleCalculator.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class LanguageResource {
+    public class LanguageResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -31,7 +31,34 @@ namespace SimpleCalculator.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal LanguageResource() {
         }
+
+        public static object Plus { 
+                get {
+                    return ResourceManager.GetString("Plus", resourceCulture);
+                }
+            }
         
+        public static object Minus
+        {
+            get
+            {
+                return ResourceManager.GetString("Minus", resourceCulture);
+            }
+        }
+        public static object Time { 
+                get {
+                    return ResourceManager.GetString("Time", resourceCulture);
+                }
+            }
+        
+        public static object DividedBy
+        {
+            get
+            {
+                return ResourceManager.GetString("DividedBy", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -39,7 +66,7 @@ namespace SimpleCalculator.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SimpleCalculator.Properties.LanguageResource", typeof(LanguageResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ClassEngineLibrary.Properties.LanguageResource", typeof(LanguageResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,7 +90,7 @@ namespace SimpleCalculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Write a valid first number :.
         /// </summary>
-        internal static string ValidFirstNumber {
+        public static string ValidFirstNumber {
             get {
                 return ResourceManager.GetString("ValidFirstNumber", resourceCulture);
             }
@@ -72,7 +99,7 @@ namespace SimpleCalculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Write a valid operation (+, -, *, /) or (plus, minus, time, divide by).
         /// </summary>
-        internal static string ValidOp {
+        public static string ValidOp {
             get {
                 return ResourceManager.GetString("ValidOp", resourceCulture);
             }
@@ -81,7 +108,7 @@ namespace SimpleCalculator.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Write a valid second number :.
         /// </summary>
-        internal static string ValidSecondNumber {
+        public static string ValidSecondNumber {
             get {
                 return ResourceManager.GetString("ValidSecondNumber", resourceCulture);
             }

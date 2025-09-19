@@ -46,7 +46,6 @@
     <Compile Include="InputConverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\LanguageResource.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -56,10 +55,6 @@
       <Project>{bc19f2b7-646a-4ce0-9783-b9d7f841ac0b}</Project>
       <Name>ClassEngineLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\LanguageResource.fr.resx" />
-    <EmbeddedResource Include="Properties\LanguageResource.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
